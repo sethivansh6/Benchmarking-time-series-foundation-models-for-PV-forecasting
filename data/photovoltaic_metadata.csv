@@ -1,0 +1,8 @@
+photovoltaic_id,microgrid_id,photovoltaic_timestamp,photovoltaic_name,photovoltaic_description,photovoltaic_system_params
+1,1,2018-04-17 05:24:08.704918,PV-A,"{""tilt"":56}",
+2,1,2018-04-17 05:24:08.720612,PV-B,"{""tilt"":56}",
+3,1,2018-04-17 05:24:08.737199,PV-C,"{""tilt"":30}",
+4,1,2018-04-17 05:24:08.753884,PV-D,"{""tilt"":30}",
+5,1,2018-04-17 05:24:08.770555,PV-E,"",
+6,1,2018-04-17 05:24:08.788435,PV-F,"",
+7,1,2018-04-17 05:24:08.796753,PV-G,"",
