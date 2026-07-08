@@ -1,6 +1,6 @@
 # Benchmarking Time Series Foundation Models for PV Forecasting
 
-A benchmarking study comparing zero-shot time-series foundation models (TSFMs), a tabular foundation model, and a LoRA fine-tuned variant against classical ML baselines for 24-hour-ahead photovoltaic power forecasting.
+A benchmarking study comparing zero-shot time-series foundation models (TSFMs), a tabular foundation model, and a LoRA fine-tuned variant against classical ML baselines for 24-hour-ahead PV power forecasting.
 
 ---
 
@@ -17,6 +17,8 @@ Evaluated on daytime samples only (solar elevation > 5°), 15-minute resolution,
 | Chronos (LoRA) | TSFM (fine-tuned) | 0.260 |
 | Chronos | TSFM (zero-shot) | 0.270 |
 | Moirai | TSFM (zero-shot) | 0.380 |
+
+Feature-engineered baselines (LightGBM/MLP) significantly outperform all zero-shot TSFMs in this setting, largely because they receive measured irradiance and solar geometry as direct inputs while TSFMs operate univariate (power history only). TabPFN bridges the gap by taking the same weather features as the baselines without any training (nRMSE 0.104 vs 0.040). Among pure TSFMs, TimesFM performs best (0.208). LoRA fine-tuning of Chronos yields a modest 3.6% nRMSE improvement over its zero-shot baseline (0.270 → 0.260) in 5 epochs on CPU. Moirai underperforms the other TSFMs and also produces non-zero nighttime predictions, motivating the daytime-only evaluation metric.
 
 ---
 
